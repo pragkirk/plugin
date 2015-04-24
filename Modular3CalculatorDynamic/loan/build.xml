@@ -1,0 +1,53 @@
+<project name="Comp" default="compile" basedir=".">
+
+	<property name="src" location="${basedir}/src"/>
+	<property name="srctest" location="${basedir}/srctest"/>
+	<property name="build" location="${basedir}/build"/>
+	<property name="lib" location="${basedir}/../bin"/>
+	<property name="buildstats" location="${basedir}/stats"/>
+	<property name="bin" location="${basedir}/bin"/>
+	<property name="version" value="1.0"/>
+	
+	<path id="project.class.path">
+		<pathelement path="${src}"/>
+		<pathelement path="${lib}/operation.jar"/>
+	</path>
+	
+	<target name="clean">
+		<delete dir="${build}"/>
+		<delete dir="${buildstats}"/>
+		<delete dir="${bin}"/>
+		<delete file="junitresults.txt"/>
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="${build}"/>
+		<mkdir dir="${buildstats}"/>
+		<mkdir dir="${bin}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}">
+			<classpath refid="project.class.path"/>
+		</javac>
+		
+		<jar jarfile="${bin}/loan.jar" basedir="${build}"/>
+	</target>
+	
+	<!-- <target name="test" depends="compile">
+		<junit printsummary="yes" haltonfailure="yes">
+			<classpath>
+				<pathelement path="${dist}/calculator.jar"/>
+				<pathelement path="${dist}/operations.jar"/>
+				<pathelement path="${dist}/mathops.jar"/>
+				<pathelement path="${dist}/calcui.jar"/>
+				<pathelement path="${dist}/calculatortest.jar"/>
+				<pathelement path="${lib}/junit.jar"/>
+			</classpath>
+			<test name="com.extensiblejava.calculator.test.AllTests" outfile="junitresults">
+				<formatter type="plain"/>
+			</test>
+		</junit>
+	</target> -->
+	
+</project>

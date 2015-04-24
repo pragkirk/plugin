@@ -1,0 +1,27 @@
+<project name="Comp" default="usage" basedir=".">
+
+	<property name="felix" location="${basedir}/felix"/>
+	<property name="modules" location="${basedir}/modules"/>
+	<property name="load" location="${basedir}/felix/load"/>
+	<property name="loan" location="${basedir}/loan/bin"/>
+	<property name="scala" location="${basedir}/loan/scala"/>
+	<property name="web" location="${basedir}/web"/>
+	<property name="stats" location="${basedir}/stats"/>
+	<property name="version" value="1.0"/>
+	
+	<target name="usage">
+		<echo message="Script to clean all projects."/>
+		<echo message="************ Use the following deployment targets ***************"/>
+		<echo message="clean.all --> Cleans all the projects."/>		
+	</target>
+	
+	<target name="clean.all" description="clean up">
+		<ant antfile="./Modular1Calculator/build.xml" target="clean" inheritall="false" />
+		<ant antfile="./Modular2Calculator/build.xml" target="clean" inheritall="false" />
+		<ant antfile="./Modular3Calculator/build.xml" target="clean" inheritall="false" />
+		<ant antfile="./Modular3Calculator/loan/build.xml" target="clean" inheritall="false" />
+		<ant antfile="./Modular3Calculator/color/build.xml" target="clean" inheritall="false" />
+		<ant antfile="./Modular3Calculator/temp/build.xml" target="clean" inheritall="false" />
+	</target>
+	
+</project>

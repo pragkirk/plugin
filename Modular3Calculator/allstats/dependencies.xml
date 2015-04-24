@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<JarAnalyzer>
+    <Jars>
+
+        <Jar name="calculator.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>1</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>1</Efferent>
+                    <Afferent>1</Afferent>
+                    <Instability>0.50</Instability>
+                    <Distance>0.50</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.calculator</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>operation.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                    <Jar>textui.jar</Jar>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="color.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>2</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>1</Efferent>
+                    <Afferent>0</Afferent>
+                    <Instability>1.00</Instability>
+                    <Distance>0.00</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.calculator.color</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>operation.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="loan.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>2</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>1</Efferent>
+                    <Afferent>0</Afferent>
+                    <Instability>1.00</Instability>
+                    <Distance>0.00</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.calculator.loan</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>operation.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="math.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>2</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>1</Efferent>
+                    <Afferent>0</Afferent>
+                    <Instability>1.00</Instability>
+                    <Distance>0.00</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.calculator.math</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>operation.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="operation.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>2</ClassCount>
+                    <AbstractClassCount>2</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>1.00</Abstractness>
+                    <Efferent>0</Efferent>
+                    <Afferent>6</Afferent>
+                    <Instability>0.00</Instability>
+                    <Distance>0.00</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.calculator.operation</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                    <Jar>calculator.jar</Jar>
+                    <Jar>color.jar</Jar>
+                    <Jar>loan.jar</Jar>
+                    <Jar>math.jar</Jar>
+                    <Jar>temp.jar</Jar>
+                    <Jar>textui.jar</Jar>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="temp.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>2</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>1</Efferent>
+                    <Afferent>0</Afferent>
+                    <Instability>1.00</Instability>
+                    <Distance>0.00</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.calculator.temp</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>operation.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="textui.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>1</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>2</Efferent>
+                    <Afferent>0</Afferent>
+                    <Instability>1.00</Instability>
+                    <Distance>0.00</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.calculator.textui</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>calculator.jar</Jar>
+                    <Jar>operation.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+    </Jars>
+</JarAnalyzer>

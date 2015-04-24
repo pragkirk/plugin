@@ -1,0 +1,1 @@
+java -cp ../bin/calculator.jar:../bin/textui.jar:../bin/operation.jar:../bin/math.jar:bin/loan.jar com.extensiblejava.calculator.textui.CalculatorTextUI

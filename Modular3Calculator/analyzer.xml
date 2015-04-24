@@ -1,0 +1,54 @@
+<project name="Analyzer" default="analyze" basedir=".">
+
+
+	<property name="lib" location="${basedir}/jaranalyzer"/>
+	<property name="modules" location="${basedir}/modules"/>
+	<property name="buildstats" location="${basedir}/allstats"/>
+	<property name="version" value="1.0"/>
+	
+	<target name="clean">
+		<delete dir="${modules}"/>
+		<delete dir="${buildstats}"/>
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="${modules}"/>
+		<mkdir dir="${buildstats}"/>
+		<copy file="${basedir}/bin/calculator.jar" todir="modules"/>
+		<copy file="${basedir}/bin/textui.jar" todir="modules"/>
+		<copy file="${basedir}/bin/math.jar" todir="modules"/>
+		<copy file="${basedir}/bin/operation.jar" todir="modules"/>
+		<copy file="${basedir}/loan/bin/loan.jar" todir="modules"/>
+		<copy file="${basedir}/color/bin/color.jar" todir="modules"/>
+		<copy file="${basedir}/temp/bin/temp.jar" todir="modules"/>
+	</target>
+	
+	<target name="analyze" depends="init">
+
+        <taskdef name="jaranalyzer" classname="com.kirkk.analyzer.textui.JarAnalyzerTask">
+            <classpath>
+                <pathelement path="${lib}/jaranalyzer-1.2.jar"/>
+                <pathelement path="${lib}/lib/bcel-5.2.jar"/>
+                <pathelement path="${lib}/lib/jakarta-regexp-1.3.jar"/>
+                <pathelement path="${lib}/lib"/>
+            </classpath>
+        </taskdef>
+
+        <jaranalyzer srcdir="${modules}" destfile="${buildstats}/dependencies.xml" 
+				summaryclass="com.kirkk.analyzer.textui.XMLUISummary" />
+				
+		<style in="${buildstats}/dependencies.xml" 
+		       out="${buildstats}/dependencies.html"
+			style="${lib}/jaranalyzer.xsl">	
+		</style>
+
+		<style in="${buildstats}/dependencies.xml" 
+		    out="${buildstats}/dependencies.grph"
+			style="${lib}/jaranalyzer2dot.xsl">	
+		</style>
+
+		<exec executable="dot" ><arg line="-Tpng -Nshape=box -Nfontsize=30 -Nwidth=1.5 -Nheight=1.25 ./allstats/dependencies.grph -o ./allstats/dependencies.png"/></exec>
+
+	</target>
+	
+</project>
