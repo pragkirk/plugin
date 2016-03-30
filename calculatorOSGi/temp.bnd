@@ -1,0 +1,4 @@
+Private-Package: com.extensiblejava.calculator.temp
+Service-Component: *
+Bundle-Version: 1.0.0
+-noee:true

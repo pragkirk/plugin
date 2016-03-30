@@ -19,6 +19,8 @@
 		<ant antfile="./Modular1Calculator/build.xml" target="clean" inheritall="false" />
 		<ant antfile="./Modular2Calculator/build.xml" target="clean" inheritall="false" />
 		<ant antfile="./Modular3Calculator/build.xml" target="clean" inheritall="false" />
+		<ant antfile="./Modular3Calculator/analyzer.xml" target="clean" inheritall="false" />
+		<ant antfile="./calculatorOSGi/build.xml" target="clean" inheritall="false" />
 		<ant antfile="./Modular3Calculator/loan/build.xml" target="clean" inheritall="false" />
 		<ant antfile="./Modular3Calculator/color/build.xml" target="clean" inheritall="false" />
 		<ant antfile="./Modular3Calculator/temp/build.xml" target="clean" inheritall="false" />
